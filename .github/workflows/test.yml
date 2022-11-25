@@ -15,6 +15,7 @@ jobs:
       - name: Run test case
         run: npm test
   deploy:
+    needs: run-test-case
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout project
