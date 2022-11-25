@@ -1,5 +1,5 @@
 name: Print Github Expression
-on: workflow_dispatch
+on: push
 jobs:
   print-github:
     runs-on: ubuntu-latest
