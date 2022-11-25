@@ -1,0 +1,8 @@
+name: Print Github Expression
+on: workflow_dispatch
+jobs:
+  print-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo " ${{ toJSON(github) }} "
