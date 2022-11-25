@@ -1,0 +1,16 @@
+name: Run test case
+on: push
+  jobs:
+    run-test-case:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Git checkout project
+          uses: actions/checkout@v3
+        - name: Node install
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Install dependency
+          run: npm ci
+        - name: Run test case
+          run: npm test
